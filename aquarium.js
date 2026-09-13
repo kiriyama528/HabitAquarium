@@ -31,7 +31,6 @@ function draw(now){
    for(let j=0;j<slices;j++){const tail=1-j/(slices-1),sway=reduced.matches?0:Math.sin(t*5.5+i+j*.24)*tail*tail*size*.023;ctx.drawImage(sprite,j*sourceWidth,0,sourceWidth,sprite.naturalHeight,-size/2+j*size/slices,-drawHeight/2+sway,size/slices+.35,drawHeight);}
   }
   ctx.restore();
-  if(effect?.newborn&&i===growth.count-1&&age<6){const halo=ctx.createRadialGradient(x,y,0,x,y,size*.6);halo.addColorStop(0,'rgba(208,238,240,.17)');halo.addColorStop(1,'rgba(208,238,240,0)');ctx.fillStyle=halo;ctx.fillRect(x-size,y-size,size*2,size*2);}
  }
  // Fine suspended particles and aeration during a water change.
  const bubbles=washing?42:7;
